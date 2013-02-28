@@ -80,24 +80,8 @@ ActiveRecord::Schema.define(:version => 20130227210121) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "genders", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "goals", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "locations", :force => true do |t|
-    t.string   "name"
-    t.string   "address"
-    t.string   "city"
-    t.string   "state"
-    t.string   "zip"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -114,13 +98,6 @@ ActiveRecord::Schema.define(:version => 20130227210121) do
     t.datetime "updated_at",       :null => false
   end
 
-  create_table "person_avatars", :force => true do |t|
-    t.integer  "avatar_id"
-    t.integer  "person_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "personal_blogs", :force => true do |t|
     t.integer  "person_id"
     t.text     "blog"
@@ -131,19 +108,6 @@ ActiveRecord::Schema.define(:version => 20130227210121) do
   create_table "reviews", :force => true do |t|
     t.text     "good"
     t.text     "bad"
-    t.integer  "person_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "roles", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "sashes", :force => true do |t|
-    t.integer  "award_id"
     t.integer  "person_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false

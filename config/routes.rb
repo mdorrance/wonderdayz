@@ -13,13 +13,13 @@ Wonderdayz::Application.routes.draw do
   resources :enlightenments
 
 
-  resources :locations
+
 
 
   resources :activities
 
 
-  resources :sashes
+
 
 
   resources :awards
@@ -28,7 +28,7 @@ Wonderdayz::Application.routes.draw do
   resources :reviews
 
 
-  resources :genders
+
 
 
   resources :crests
@@ -37,13 +37,13 @@ Wonderdayz::Application.routes.draw do
   resources :family_crests
 
 
-  resources :person_avatars
+
 
 
   resources :avatars
 
 
-  resources :roles
+
 
 
   resources :people
