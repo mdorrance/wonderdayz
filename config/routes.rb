@@ -16,9 +16,6 @@ Wonderdayz::Application.routes.draw do
   resources :locations
 
 
-  resources :costs
-
-
   resources :activities
 
 

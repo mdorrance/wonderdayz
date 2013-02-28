@@ -44,12 +44,6 @@ ActiveRecord::Schema.define(:version => 20130227210121) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "costs", :force => true do |t|
-    t.integer  "amount"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "crests", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
