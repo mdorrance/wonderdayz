@@ -1,0 +1,25 @@
+<%= form_for(@enlightenment) do |f| %>
+  <% if @enlightenment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@enlightenment.errors.count, "error") %> prohibited this enlightenment from being saved:</h2>
+
+      <ul>
+      <% @enlightenment.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :adventure_id %><br />
+    <%= f.number_field :adventure_id %>
+  </div>
+  <div class="field">
+    <%= f.label :goal_id %><br />
+    <%= f.number_field :goal_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

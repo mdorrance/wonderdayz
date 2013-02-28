@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  tribe_name: MyString
+  family_crest_id: 1
+  adventure_id: 1
+  person_id: 1
+
+two:
+  tribe_name: MyString
+  family_crest_id: 1
+  adventure_id: 1
+  person_id: 1

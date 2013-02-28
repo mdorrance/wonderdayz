@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @adventure.name %>
+</p>
+
+<p>
+  <b>Activity:</b>
+  <%= @adventure.activity_id %>
+</p>
+
+<p>
+  <b>Family crest:</b>
+  <%= @adventure.family_crest_id %>
+</p>
+
+<p>
+  <b>Cost:</b>
+  <%= @adventure.cost_id %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @adventure.location_id %>
+</p>
+
+<p>
+  <b>Family:</b>
+  <%= @adventure.family_id %>
+</p>
+
+<p>
+  <b>Review:</b>
+  <%= @adventure.review_id %>
+</p>
+
+<p>
+  <b>Tips:</b>
+  <%= @adventure.tips %>
+</p>
+
+
+<%= link_to 'Edit', edit_adventure_path(@adventure) %> |
+<%= link_to 'Back', adventures_path %>

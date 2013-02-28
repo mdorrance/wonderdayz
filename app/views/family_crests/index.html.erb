@@ -1,0 +1,25 @@
+<h1>Listing family_crests</h1>
+
+<table>
+  <tr>
+    <th>Crest</th>
+    <th>Family</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @family_crests.each do |family_crest| %>
+  <tr>
+    <td><%= family_crest.crest_id %></td>
+    <td><%= family_crest.family_id %></td>
+    <td><%= link_to 'Show', family_crest %></td>
+    <td><%= link_to 'Edit', edit_family_crest_path(family_crest) %></td>
+    <td><%= link_to 'Destroy', family_crest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Family crest', new_family_crest_path %>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  trail_name: MyString
+  age: MyString
+  gender_id: 1
+  role_id: 1
+  sash_id: 1
+  person_avatar_id: 1
+
+two:
+  trail_name: MyString
+  age: MyString
+  gender_id: 1
+  role_id: 1
+  sash_id: 1
+  person_avatar_id: 1

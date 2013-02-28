@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Adventure:</b>
+  <%= @enlightenment.adventure_id %>
+</p>
+
+<p>
+  <b>Goal:</b>
+  <%= @enlightenment.goal_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_enlightenment_path(@enlightenment) %> |
+<%= link_to 'Back', enlightenments_path %>

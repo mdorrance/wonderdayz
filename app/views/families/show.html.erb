@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Tribe name:</b>
+  <%= @family.tribe_name %>
+</p>
+
+<p>
+  <b>Family crest:</b>
+  <%= @family.family_crest_id %>
+</p>
+
+<p>
+  <b>Adventure:</b>
+  <%= @family.adventure_id %>
+</p>
+
+<p>
+  <b>Person:</b>
+  <%= @family.person_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_family_path(@family) %> |
+<%= link_to 'Back', families_path %>

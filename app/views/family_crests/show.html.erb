@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Crest:</b>
+  <%= @family_crest.crest_id %>
+</p>
+
+<p>
+  <b>Family:</b>
+  <%= @family_crest.family_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_family_crest_path(@family_crest) %> |
+<%= link_to 'Back', family_crests_path %>

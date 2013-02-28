@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  activity_id: 1
+  family_crest_id: 1
+  cost_id: 1
+  location_id: 1
+  family_id: 1
+  review_id: 1
+  tips: MyText
+
+two:
+  name: MyString
+  activity_id: 1
+  family_crest_id: 1
+  cost_id: 1
+  location_id: 1
+  family_id: 1
+  review_id: 1
+  tips: MyText

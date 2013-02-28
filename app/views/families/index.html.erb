@@ -1,0 +1,29 @@
+<h1>Listing families</h1>
+
+<table>
+  <tr>
+    <th>Tribe name</th>
+    <th>Family crest</th>
+    <th>Adventure</th>
+    <th>Person</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @families.each do |family| %>
+  <tr>
+    <td><%= family.tribe_name %></td>
+    <td><%= family.family_crest_id %></td>
+    <td><%= family.adventure_id %></td>
+    <td><%= family.person_id %></td>
+    <td><%= link_to 'Show', family %></td>
+    <td><%= link_to 'Edit', edit_family_path(family) %></td>
+    <td><%= link_to 'Destroy', family, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Family', new_family_path %>

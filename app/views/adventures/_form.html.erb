@@ -1,0 +1,49 @@
+<%= form_for(@adventure) do |f| %>
+  <% if @adventure.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@adventure.errors.count, "error") %> prohibited this adventure from being saved:</h2>
+
+      <ul>
+      <% @adventure.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :activity_id %><br />
+    <%= f.number_field :activity_id %>
+  </div>
+  <div class="field">
+    <%= f.label :family_crest_id %><br />
+    <%= f.number_field :family_crest_id %>
+  </div>
+  <div class="field">
+    <%= f.label :cost_id %><br />
+    <%= f.number_field :cost_id %>
+  </div>
+  <div class="field">
+    <%= f.label :location_id %><br />
+    <%= f.number_field :location_id %>
+  </div>
+  <div class="field">
+    <%= f.label :family_id %><br />
+    <%= f.number_field :family_id %>
+  </div>
+  <div class="field">
+    <%= f.label :review_id %><br />
+    <%= f.number_field :review_id %>
+  </div>
+  <div class="field">
+    <%= f.label :tips %><br />
+    <%= f.text_area :tips %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,23 @@
+<h1>Listing crests</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @crests.each do |crest| %>
+  <tr>
+    <td><%= crest.name %></td>
+    <td><%= link_to 'Show', crest %></td>
+    <td><%= link_to 'Edit', edit_crest_path(crest) %></td>
+    <td><%= link_to 'Destroy', crest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Crest', new_crest_path %>

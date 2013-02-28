@@ -1,0 +1,25 @@
+<%= form_for(@family_crest) do |f| %>
+  <% if @family_crest.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@family_crest.errors.count, "error") %> prohibited this family_crest from being saved:</h2>
+
+      <ul>
+      <% @family_crest.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :crest_id %><br />
+    <%= f.number_field :crest_id %>
+  </div>
+  <div class="field">
+    <%= f.label :family_id %><br />
+    <%= f.number_field :family_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  family_id: 1
+  blog: MyText
+
+two:
+  family_id: 1
+  blog: MyText
