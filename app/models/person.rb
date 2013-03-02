@@ -5,11 +5,8 @@ class Person < ActiveRecord::Base
   belongs_to :avatar
   has_many :reviews
 
-
-
   has_many :personal_blogs
 
-  # has_secure_password
-
+  has_secure_password
 
 end
