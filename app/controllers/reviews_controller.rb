@@ -45,8 +45,10 @@ class ReviewsController < ApplicationController
     @review = Review.new(params[:review])
 
     respond_to do |format|
+
       if @review.save
-        format.html { redirect_to @review, notice: 'Review was successfully created.' }
+        @person = Person.find_by_id(@review.person_id)
+        format.html { redirect_to @person, notice: 'Review was successfully created.' }
         format.json { render json: @review, status: :created, location: @review }
       else
         format.html { render action: "new" }
@@ -62,7 +64,7 @@ class ReviewsController < ApplicationController
 
     respond_to do |format|
       if @review.update_attributes(params[:review])
-        format.html { redirect_to @review, notice: 'Review was successfully updated.' }
+        format.html { redirect_to person_url, notice: 'Review was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

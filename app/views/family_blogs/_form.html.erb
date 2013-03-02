@@ -12,8 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :family_id %><br />
-    <%= f.number_field :family_id %>
+    <%= f.hidden_field :family_id, :value => current_user.family_id %>
   </div>
   <div class="field">
     <%= f.label :blog %><br />

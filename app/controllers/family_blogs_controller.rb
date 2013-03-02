@@ -44,7 +44,8 @@ class FamilyBlogsController < ApplicationController
 
     respond_to do |format|
       if @family_blog.save
-        format.html { redirect_to @family_blog, notice: 'Family blog was successfully created.' }
+        @person = Person.find_by_id(@family_blog.person_id)
+        format.html { redirect_to @person, notice: 'Family blog was successfully created.' }
         format.json { render json: @family_blog, status: :created, location: @family_blog }
       else
         format.html { render action: "new" }

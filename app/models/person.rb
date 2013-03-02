@@ -3,6 +3,8 @@ class Person < ActiveRecord::Base
 
   belongs_to :family
   belongs_to :avatar
+  has_many :reviews
+  has_many :personal_blogs
 
   has_secure_password
 

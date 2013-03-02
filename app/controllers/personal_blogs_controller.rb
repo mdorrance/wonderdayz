@@ -44,7 +44,8 @@ class PersonalBlogsController < ApplicationController
 
     respond_to do |format|
       if @personal_blog.save
-        format.html { redirect_to @personal_blog, notice: 'Personal blog was successfully created.' }
+        @person = Person.find_by_id(@personal_blog.id)
+        format.html { redirect_to @person, notice: 'Personal blog was successfully created.' }
         format.json { render json: @personal_blog, status: :created, location: @personal_blog }
       else
         format.html { render action: "new" }

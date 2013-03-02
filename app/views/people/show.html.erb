@@ -2,7 +2,7 @@
   <div class="well sidebar-nav">
       <ul class="nav nav-list">
 
-        <li class="nav-header"><%#= @person.email %></li>
+        <li class="nav-header"><%= @person.email %></li>
         <li>RECENT ACTIVITY</li>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -14,7 +14,7 @@
   </div><!--/.well -->
 </div>
 <div class="wrapper">
-<%#= link_to 'Edit', edit_person_path(@person) %> <%#= link_to 'Back', people_path %>
+<%= link_to 'Edit', edit_person_path(@person) %> <%= link_to 'Back', people_path %>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -22,11 +22,11 @@
 </p>
 
 <p>
-  <b>Trail name:</b>
+  <b>Trail name: <%= @person.trail_name %></b>
 </p>
 
 <p>
-  <b>Age:</b>
+  <b>Age: <%= @person.age %></b>
 </p>
 
   <h1>DOCKET</h1>
@@ -38,20 +38,17 @@
   proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   <div class="blog">
     <h1>BLOG</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+    <%= link_to 'Create Blog Post', new_personal_blog_url %>
+    <% @person.personal_blogs.each do |b| %>
+    <li><%= b.blog %></li>
+    <% end %>
+  </div>
   <div class="review">
     <h1>REVIEWS</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <%= link_to 'Create Review', new_review_url %>
+    <% @person.reviews.each do |rev| %>
+    <li><%= rev.good %></li>
+    <% end %>
   </div>
 </div>
 </div>
