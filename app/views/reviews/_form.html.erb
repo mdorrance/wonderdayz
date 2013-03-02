@@ -20,8 +20,7 @@
     <%= f.text_area :bad %>
   </div>
   <div class="field">
-    <%= f.label :person_id %><br />
-    <%= f.number_field :person_id %>
+    <%= f.hidden_field :person_id, :value => current_user.id %>
   </div>
   <div class="actions">
     <%= f.submit %>
