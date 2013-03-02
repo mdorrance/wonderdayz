@@ -14,12 +14,16 @@ class PeopleController < ApplicationController
   # GET /people/1.json
   def show
 
-    @person = Person.find_by_id(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @person }
+    if Person.find_by_id(params[:id]) != nil
+      @person = Person.find_by_id(params[:id])
+    else
+      redirect_to sign_in_url
     end
+
+    # respond_to do |format|
+    #   format.html # show.html.erb
+    #   format.json { render json: @person }
+    # end
   end
 
   # GET /people/new
