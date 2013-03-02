@@ -29,3 +29,37 @@
 //
 // Example:
 @linkColor: blue;
+
+.wrapper {
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  border-radius: 5px;
+  float: right;
+  padding: 20px;
+  width: 70%;
+}
+
+.wrapper:before, .wrapper:after {
+  content: "";
+  display: table;
+}
+
+.wrapper:after {
+  clear: both;
+}
+
+.blog, .review {
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  border-radius: 5px;
+  padding: 10px;
+  width: 45%;
+}
+
+.blog {
+  float: left;
+}
+
+.review {
+  float: right;
+}
