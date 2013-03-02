@@ -58,6 +58,14 @@ Wonderdayz::Application.routes.draw do
 
   resources :adventures
 
+  get "sessions/new", :as => :sign_in
+
+  post "sessions/create"
+
+  get "sessions/destroy"
+
+  resources :users
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
