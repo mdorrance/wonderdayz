@@ -18,16 +18,16 @@
 <% @adventures.each do |adventure| %>
   <tr>
     <td><%= adventure.name %></td>
-    <td><%= adventure.activity_id %></td>
-    <td><%= adventure.family_crest_id %></td>
-    <td><%= adventure.cost_id %></td>
-    <td><%= adventure.location_id %></td>
-    <td><%= adventure.family_id %></td>
-    <td><%= adventure.review_id %></td>
-    <td><%= adventure.tips %></td>
-    <td><%= link_to 'Show', adventure %></td>
-    <td><%= link_to 'Edit', edit_adventure_path(adventure) %></td>
-    <td><%= link_to 'Destroy', adventure, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%#= adventure.activity_id %></td>
+    <td><%#= adventure.family_crest_id %></td>
+    <td><%= adventure.activity.cost %></td>
+    <td><%#= adventure.location_id %></td>
+    <td><%#= adventure.family_id %></td>
+    <td><%#= adventure.review_id %></td>
+    <td><%#= adventure.tips %></td>
+    <td><%#= link_to 'Show', adventure %></td>
+    <td><%#= link_to 'Edit', edit_adventure_path(adventure) %></td>
+    <td><%#= link_to 'Destroy', adventure, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>

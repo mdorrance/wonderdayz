@@ -41,10 +41,11 @@ class AdventuresController < ApplicationController
   # POST /adventures.json
   def create
     @adventure = Adventure.new(params[:adventure])
-
     respond_to do |format|
       if @adventure.save
-        format.html { redirect_to @adventure, notice: 'Adventure was successfully created.' }
+        @person = current_user
+        @adventure.update_attribute(:family_id, @person.family_id)
+        format.html { redirect_to @person, notice: 'Adventure was successfully created.' }
         format.json { render json: @adventure, status: :created, location: @adventure }
       else
         format.html { render action: "new" }
