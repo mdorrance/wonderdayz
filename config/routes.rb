@@ -28,7 +28,7 @@ Wonderdayz::Application.routes.draw do
 
   get "sessions/destroy"
 
-
+  get 'addmember/new' => "addmember#new"
 
 
   # The priority is based upon order of creation:
