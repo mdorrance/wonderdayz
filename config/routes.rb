@@ -60,7 +60,7 @@ Wonderdayz::Application.routes.draw do
 
   get "sessions/new", :as => :sign_in
 
-  post "sessions/create"
+  post "sessions/create" => "sessions#create"
 
   get "sessions/destroy"
 
