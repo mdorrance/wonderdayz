@@ -1,7 +1,9 @@
 class Person < ActiveRecord::Base
-  attr_accessible :age, :gender_id, :trail_name, :family_id, :gender, :role, :avatar_id
+  attr_accessible :age, :gender_id, :trail_name, :family_id, :gender, :role, :avatar_id, :email, :password_digest, :password_confirmation
 
   belongs_to :family
   belongs_to :avatar
+
+  has_secure_password
 
 end
