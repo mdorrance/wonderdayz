@@ -6,9 +6,8 @@ class AddmembersMailer < ActionMailer::Base
   #
   #   en.addmembers_mailer.invite.subject
   #
-  def invite
-    @greeting = "Hi"
-
-    mail to: "to@example.org"
+  def invite(person)
+    @person = person
+    mail(to: person.email, subject: "welcome")
   end
 end

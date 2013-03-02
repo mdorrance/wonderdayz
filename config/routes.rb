@@ -30,7 +30,7 @@ Wonderdayz::Application.routes.draw do
 
   get 'addmember/new' => "addmember#new"
 
-
+  post 'addmember/create' => "addmember#create"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

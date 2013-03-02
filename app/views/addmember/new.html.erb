@@ -1,4 +1,6 @@
 <h1>Add a member to your family</h1>
 
-
-
+<%= form_tag "/addmember/create" do %>
+  <%= label_tag :email %><%= text_field_tag :email %><br>
+<%= submit_tag "Log Me In" %>
+<% end %>
