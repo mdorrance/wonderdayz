@@ -1,7 +1,9 @@
 class Family < ActiveRecord::Base
-  attr_accessible :family_crest_id, :tribe_name
+  attr_accessible :tribe_name
 
-  belongs_to :family_crest
+  has_many :family_crests
   has_many :adventures
   has_many :people
+
+ # belongs_to :crest, :through => :family_crest
 end

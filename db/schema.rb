@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130302025035) do
+ActiveRecord::Schema.define(:version => 20130302163757) do
 
   create_table "activities", :force => true do |t|
     t.string   "name"
@@ -62,9 +62,8 @@ ActiveRecord::Schema.define(:version => 20130302025035) do
 
   create_table "families", :force => true do |t|
     t.string   "tribe_name"
-    t.integer  "family_crest_id"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "family_blogs", :force => true do |t|

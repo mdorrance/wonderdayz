@@ -4,6 +4,6 @@ class Person < ActiveRecord::Base
   belongs_to :family
   belongs_to :avatar
 
-  has_secure_password
+  # has_secure_password
 
 end
