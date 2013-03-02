@@ -2,7 +2,7 @@
   <div class="well sidebar-nav">
       <ul class="nav nav-list">
         <%= image_tag(@person.avatar.image_url) %>
-        <li class="nav-header">Username</li>
+        <li class="nav-header"><%= @person.email %></li>
         <li>RECENT ACTIVITY</li>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -13,7 +13,7 @@
       </ul>
   </div><!--/.well -->
 </div>
-<div class="wrapper docket">
+<div class="wrapper">
 
 <p id="notice"><%= notice %></p>
 
