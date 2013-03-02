@@ -6,4 +6,4 @@ AddmembersMailer#invite
 <%= @person.family_id %>
 
 
-/people/new?family_id=<%= @person.family_id %>
+<%= link_to '/addmember/confirm/#{@person.family_id}/#{@p} ' %>

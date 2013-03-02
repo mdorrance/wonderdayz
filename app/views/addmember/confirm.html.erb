@@ -1,0 +1,15 @@
+<h3>Hello, please setup your password</h3>
+
+<%= form_tag 'addmember/confirm' do %>
+
+    <div class="field">
+      <%=  hidden_field :family_id, :value => :family_id %>
+    <div class="field">
+      <%= label_tag :password %><br />
+      <%= password_field_tag :password %>
+    <div class="field">
+      <%= label_tag :password_confirmation %><br />
+    <%= password_field_tag :password_confirmation %>
+<%= submit_tag %>
+
+<% end %>
