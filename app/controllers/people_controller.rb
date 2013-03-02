@@ -56,7 +56,15 @@ class PeopleController < ApplicationController
 
     respond_to do |format|
       if @person.save
-        format.html { redirect_to root_url, notice: 'Person was successfully created.' }
+        f=Family.new
+        f.tribe_name=@person.family_name
+        f.save
+
+        @person.update_attribute(:family_id, f.id)
+
+
+
+        format.html { redirect_to @person, notice: 'Person was successfully created.' }
         format.json { render json: @person, status: :created, location: @person }
       else
         format.html { render action: "new" }
