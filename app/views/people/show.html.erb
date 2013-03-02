@@ -1,7 +1,7 @@
 <div class="span3">
   <div class="well sidebar-nav">
       <ul class="nav nav-list">
-        <img src="http://en.gravatar.com/kittysingsuwan">
+        <%= image_tag(@person.avatar.image_url) %>
         <li class="nav-header">Username</li>
         <li>RECENT ACTIVITY</li>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -18,12 +18,12 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Trail name:</b>
+  <b>Email:</b>
   <%= @person.email %>
 </p>
 
 <p>
-  <b>Tribe name:</b>
+  <b>Trail name:</b>
   <%= @person.trail_name %>
 </p>
 
