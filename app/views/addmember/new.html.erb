@@ -2,5 +2,6 @@
 
 <%= form_tag "/addmember/create" do %>
   <%= label_tag :email %><%= text_field_tag :email %><br>
+  <%= hidden_field_tag :family_id, value: @person.family_id %>
 <%= submit_tag "Log Me In" %>
 <% end %>

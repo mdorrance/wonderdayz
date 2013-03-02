@@ -31,6 +31,11 @@ Wonderdayz::Application.routes.draw do
   get 'addmember/new' => "addmember#new"
 
   post 'addmember/create' => "addmember#create"
+
+  get 'addmember/confirm/:family_id' => "addmember#confirm"
+
+  post 'addmember/confirm'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
