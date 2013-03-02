@@ -3,7 +3,7 @@ class Person < ActiveRecord::Base
 
   belongs_to :family
   belongs_to :avatar
-
-  has_secure_password
+  has_many :reviews
+  # has_secure_password
 
 end
