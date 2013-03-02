@@ -1,61 +1,25 @@
 Wonderdayz::Application.routes.draw do
 
-  root :to => 'People#show'
+
+
+  get "/login" => "sessions#new", as: 'login'
+  post "/sessions" => "sessions#create", as: 'sessions'
+  delete "/sessions/" => "sessions#destroy", as: 'logout'
+  root :to => 'sessions#new'
 
   resources :person_awards
-
-
   resources :personal_blogs
-
-
   resources :family_blogs
-
-
   resources :goals
-
-
   resources :enlightenments
-
-
-
-
-
   resources :activities
-
-
-
-
-
   resources :awards
-
-
   resources :reviews
-
-
-
-
-
   resources :crests
-
-
   resources :family_crests
-
-
-
-
-
   resources :avatars
-
-
-
-
-
   resources :people
-
-
   resources :families
-
-
   resources :adventures
 
   get "sessions/new", :as => :sign_in
@@ -64,7 +28,7 @@ Wonderdayz::Application.routes.draw do
 
   get "sessions/destroy"
 
-  resources :users
+
 
 
   # The priority is based upon order of creation:

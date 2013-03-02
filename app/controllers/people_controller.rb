@@ -1,13 +1,7 @@
 class PeopleController < ApplicationController
 
-  before_filter :authorize_user, except: [:index, :new, :create]
+  skip_before_filter :require_login, :only => [:new, :create]
 
-  def authorize_user
-    @person = Person.find_by_id(params[:id])
-    if session[:id].present? || session[:id] != @person
-      redirect_to root_url, notice: "Nice try"
-    end
-  end
 
 
 
