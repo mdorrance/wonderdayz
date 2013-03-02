@@ -1,3 +1,10 @@
 class Adventure < ActiveRecord::Base
-  attr_accessible :activity_id, :cost_id, :family_crest_id, :family_id, :location_id, :name, :review_id, :tips
+  attr_accessible :activity_id, :family_id, :name, :tips
+
+  belongs_to :activity
+  belongs_to :family
+  has_many :reviews, :through => :family
+
+
 end
+

@@ -11,31 +11,34 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130227210121) do
+ActiveRecord::Schema.define(:version => 20130301215041) do
 
   create_table "activities", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.integer  "cost"
+    t.string   "location_name"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zipcode"
   end
 
   create_table "adventures", :force => true do |t|
     t.string   "name"
     t.integer  "activity_id"
-    t.integer  "family_crest_id"
-    t.integer  "cost_id"
-    t.integer  "location_id"
     t.integer  "family_id"
-    t.integer  "review_id"
     t.text     "tips"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "avatars", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "image_url"
   end
 
   create_table "awards", :force => true do |t|
@@ -60,8 +63,6 @@ ActiveRecord::Schema.define(:version => 20130227210121) do
   create_table "families", :force => true do |t|
     t.string   "tribe_name"
     t.integer  "family_crest_id"
-    t.integer  "adventure_id"
-    t.integer  "person_id"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
   end
@@ -89,13 +90,19 @@ ActiveRecord::Schema.define(:version => 20130227210121) do
   create_table "people", :force => true do |t|
     t.string   "trail_name"
     t.string   "age"
-    t.integer  "gender_id"
-    t.integer  "role_id"
-    t.integer  "sash_id"
-    t.integer  "person_avatar_id"
     t.integer  "family_id"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "gender"
+    t.string   "role"
+    t.integer  "avatar_id"
+  end
+
+  create_table "person_awards", :force => true do |t|
+    t.integer  "award_id"
+    t.integer  "person_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "personal_blogs", :force => true do |t|

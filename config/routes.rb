@@ -1,5 +1,9 @@
 Wonderdayz::Application.routes.draw do
+
   root :to => 'Adventures#index'
+
+  resources :person_awards
+
 
   resources :personal_blogs
 

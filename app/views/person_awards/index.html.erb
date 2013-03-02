@@ -1,0 +1,25 @@
+<h1>Listing person_awards</h1>
+
+<table>
+  <tr>
+    <th>Award</th>
+    <th>Person</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @person_awards.each do |person_award| %>
+  <tr>
+    <td><%= person_award.award_id %></td>
+    <td><%= person_award.person_id %></td>
+    <td><%= link_to 'Show', person_award %></td>
+    <td><%= link_to 'Edit', edit_person_award_path(person_award) %></td>
+    <td><%= link_to 'Destroy', person_award, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Person award', new_person_award_path %>
