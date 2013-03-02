@@ -64,7 +64,7 @@ class PeopleController < ApplicationController
 
 
 
-        format.html { redirect_to root_url, notice: 'Person was successfully created.' }
+        format.html { redirect_to @person, notice: 'Person was successfully created.' }
         format.json { render json: @person, status: :created, location: @person }
       else
         format.html { render action: "new" }
