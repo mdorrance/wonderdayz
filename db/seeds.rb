@@ -69,7 +69,11 @@ family_crests.each do |family_crest_hash|
 
 activities = [
   {:name => "Hiking", :cost => 0, :location_name => "Land of Oz", :address => "1234 Yellow Brick Rd", :city => "Munchkinville", :state => "Oz", :zipcode => "12345", :goal_id => Goal.find_by_name("1 Mile Hike").id},
-  {:name => "Swimming", :cost => 0, :location_name => "Dagobah", :address => "1234 Swamp", :city => "Middle of Nowhere", :state => "Yoda", :zipcode => "12345", :goal_id => Goal.find_by_name("Swim in Lake").id}
+  {:name => "Camping", :cost => 0, :location_name => "Land of Oz", :address => "1234 Yellow Brick Rd", :city => "Munchkinville", :state => "Oz", :zipcode => "12345", :goal_id => Goal.find_by_name("1 Mile Hike").id},
+  {:name => "Cooking", :cost => 0, :location_name => "Land of Oz", :address => "1234 Yellow Brick Rd", :city => "Munchkinville", :state => "Oz", :zipcode => "12345", :goal_id => Goal.find_by_name("1 Mile Hike").id},
+  {:name => "Biking", :cost => 0, :location_name => "Land of Oz", :address => "1234 Yellow Brick Rd", :city => "Munchkinville", :state => "Oz", :zipcode => "12345", :goal_id => Goal.find_by_name("1 Mile Hike").id},
+  {:name => "Swimming", :cost => 0, :location_name => "Land of Oz", :address => "1234 Yellow Brick Rd", :city => "Munchkinville", :state => "Oz", :zipcode => "12345", :goal_id => Goal.find_by_name("1 Mile Hike").id},
+  {:name => "Explore Park", :cost => 0, :location_name => "Dagobah", :address => "1234 Swamp", :city => "Middle of Nowhere", :state => "Yoda", :zipcode => "12345", :goal_id => Goal.find_by_name("Swim in Lake").id}
 ]
 
 puts "#{FamilyCrest.count} Family crests created - should be 2"
