@@ -55,17 +55,17 @@
   cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
   proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   <div class="blog">
-    <h1>BLOG</h1>
+    <h1>BLOG POSTS</h1>
     <%= link_to 'Create Blog Post', new_personal_blog_url %>
     <% @person.personal_blogs.each do |b| %>
-    <li><%= b.blog %></li>
+    <li><%= link_to b.blog, b %></li>
     <% end %>
   </div>
   <div class="review">
     <h1>REVIEWS</h1>
     <%= link_to 'Create Review', new_review_url %>
     <% @person.reviews.each do |rev| %>
-    <li><%= rev.good %></li>
+    <li><%= link_to rev.good, rev %></li>
     <% end %>
   </div>
 </div>
