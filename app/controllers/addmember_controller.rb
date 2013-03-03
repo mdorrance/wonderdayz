@@ -1,7 +1,7 @@
 class AddmemberController < ApplicationController
 
 def new
-  session[:id] = Person.id
+  session[:id] = Person.new.family_id
   @person = Person.find(session[:person_id])
 end
 
