@@ -18,8 +18,8 @@
 
 <p>
   <b>Location:</b>
-  <%= @adventure.activity.address %> <%= @adventure.activity.city %> <%= @adventure.activity.state %> <%= @adventure.activity.zipcode %>
-</p>
+  <p><%= @adventure.activity.address %></p>
+  <p><%= @adventure.activity.city %>, <%= @adventure.activity.state %> <%= @adventure.activity.zipcode %></p>
 
 <p>
   <b>Family:</b>
@@ -27,7 +27,7 @@
 </p>
 
 <p>
-  <h2>Personal Reviews:</h2>
+  <h3>Personal Reviews:</h3>
   <% @reviews.each do |review| %>
   <br><b>Name:</b> <%= review.person.trail_name %>
   <br><b>GOOD:</b> <%= review.good %>
@@ -37,7 +37,7 @@
 </p>
 
 <p>
-  <h2>Family Reviews:</h2>
+  <h3>Family Reviews:</h3>
 
   <% @reviews.each do |review| %>
   <br><b>Name:</b> <%= review.person.trail_name %>
