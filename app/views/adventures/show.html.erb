@@ -27,7 +27,14 @@
 
 <p>
   <b>Review:</b>
-  <%#= @adventure.activity.reviews.class %>
+
+<% @reviews.each do |review| %>
+<br><b>GOOD:</b> <%= review.good %><br>
+<b>BAD:</b> <%= review.bad %>
+<% end %>
+
+
+
 </p>
 
 <p>

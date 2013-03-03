@@ -14,7 +14,7 @@ class AdventuresController < ApplicationController
   # GET /adventures/1.json
   def show
     @adventure = Adventure.find(params[:id])
-
+    @reviews = Review.where(:adventure_id => @adventure.id)
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @adventure }
