@@ -17,16 +17,14 @@
     <%= f.hidden_field :person_id, :value => current_user.id %>
   </div>
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.label :name %> <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :activity %><br />
-    <%= f.collection_select :activity_id, Activity.all, :id, :name %>
+    <%= f.label :activity %> <%= f.collection_select :activity_id, Activity.all, :id, :name %>
     <%= link_to 'Add New Activity', new_activity_url %>
   </div>
   <div class="field">
-    <%= f.label :tips %><br />
+    <%= f.label :tips %>
     <%= f.text_area :tips %>
   </div>
   <div class="actions">

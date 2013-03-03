@@ -12,8 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :adventure %><br />
-    <%= f.collection_select :adventure_id, Adventure.all, :id, :name %>
+    <%= f.label :adventure %> <%= f.collection_select :adventure_id, Adventure.all, :id, :name %>
   </div>
 
   <div class="field">
