@@ -46,12 +46,16 @@
             <span class="icon-bar"></span>
           </a>
           <div class="container-fluid nav-collapse">
+            <%if @current_user.present? %>
+            <div><%= link_to 'Wonderdayz', current_user, :class => 'logo' %></div>
+            <%else %>
             <div><%= link_to 'Wonderdayz', root_url, :class => 'logo' %></div>
+            <% end %>
             <div class="top-nav">
             <ul class="nav">
             <% if @current_user.present? %>
               <li class="loggedin">(logged in as <%= @current_user.email %>)</li>
-              <li><%#= link_to "Go to My Family Page", family_path(@person.family) %></li>
+              <li><%= link_to "Go to My Family Page", family_path(current_user.family) %></li>
               <li><%= link_to "Sign Out", '/sessions/destroy'  %></li>
             <% else %>
               <li><%= link_to "Sign Up", new_person_url  %></li>

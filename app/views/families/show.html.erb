@@ -1,9 +1,12 @@
 <p id="notice"><%= notice %></p>
-<%= @family.id %>
+<h2><%= @family.tribe_name %> Tribe</h2>
 
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
+      <th>Trail Name</th>
+      <th>Gender</th>
+      <th>Age</th>
       <th>Email</th>
       <th>&nbsp;</th>
 
@@ -12,6 +15,9 @@
   <tbody>
     <% @family_members.each do |member| %>
       <tr>
+        <td><%= member.trail_name %></td>
+        <td><%= member.gender %></td>
+        <td><%= member.age %></td>
         <td><%= member.email %></td>
         <td></td>
 
@@ -39,6 +45,9 @@
 
 <div class="form-inputs">
   <%= f.hidden_field :family_id %>
+  <%= f.input :trail_name, :label => "Enter your Unique Trail Name" %>
+  <%= f.input :age, :label => "Enter your Age" %>
+  <%= f.input :gender, collection: [ "Male", "Female"], :label => "Male or Female?" %>
   <%= f.input :email, :label => "email:" %>
   <%= f.input :password, :label => "password:" %>
   <%= f.input :password_confirmation, :label => "password confirmation:" %>
