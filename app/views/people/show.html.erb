@@ -9,6 +9,18 @@
         <% end %>
       </ul>
   </div><!--/.well -->
+  <div class="well sidebar-nav">
+      <ul class="nav nav-list">
+        <li><b>Path to Outdoor Enlightenment</b> </li><br>
+
+
+        <li>Recent Adventures</li>
+        <%= link_to "New Adventure", new_adventure_url %>
+        <% @person.family.adventures.each do |adventure| %>
+        <li><%= link_to adventure.name, adventure %></li>
+        <% end %>
+      </ul>
+  </div><!--/.well -->
 </div>
 <div class="wrapper">
 <%= link_to 'Edit', edit_person_path(@person) %> <%= link_to 'Back', people_path %>

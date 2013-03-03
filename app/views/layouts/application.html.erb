@@ -45,7 +45,11 @@
             <span class="icon-bar"></span>
           </a>
           <div class="container-fluid nav-collapse">
+            <%if @current_user.present? %>
+            <div><%= link_to 'Wonderdayz', current_user, :class => 'logo' %></div>
+            <%else %>
             <div><%= link_to 'Wonderdayz', root_url, :class => 'logo' %></div>
+            <% end %>
             <div class="top-nav">
             <ul class="nav">
             <% if @current_user.present? %>
