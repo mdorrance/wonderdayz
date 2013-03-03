@@ -30,6 +30,10 @@
 // Example:
 @linkColor: blue;
 
+body, a {
+  font-family: 'Open Sans', sans-serif;
+}
+
 .wrapper {
   background-color: #f5f5f5;
   border: 1px solid #e3e3e3;
@@ -64,17 +68,17 @@
   float: right;
 }
 
-footer {
-  bottom: 0;
-  padding: 10px;
-  position: fixed;
-  height: 40px;
-  width: 100%;
-  background: -webkit-linear-gradient(top, #ffffff, #999999);
-  background: -moz-linear-gradient(top, #ffffff, #999999);
-  background: -ms-linear-gradient(top, #ffffff, #999999);
-  background: -o-linear-gradient(top, #ffffff, #999999);
-}
+// footer {
+//   bottom: 0;
+//   padding: 10px;
+//   position: fixed;
+//   height: 40px;
+//   width: 100%;
+//   background: -webkit-linear-gradient(top, #ffffff, #999999);
+//   background: -moz-linear-gradient(top, #ffffff, #999999);
+//   background: -ms-linear-gradient(top, #ffffff, #999999);
+//   background: -o-linear-gradient(top, #ffffff, #999999);
+// }
 
 .find-adventures {
   width: 100%;
@@ -97,4 +101,60 @@ footer {
 .top-nav {
   float: right;
   margin: 8px 0 0 0;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+form {
+  width: 75%;
+}
+
+input[type="text"] {
+  float: right;
+  height: 40px;
+  margin: 0 0 20px 0;
+  width: 75%;
+}
+
+input[type="submit"] {
+  float: right;
+  margin: 10px 18px 0 0;
+  width: 25%;
+}
+
+textarea {
+  // margin: 0 0 50px 70px;
+  float: right;
+  width: 75%;
+}
+
+select {
+  float: right;
+  // margin: 0 0 50px 38px;
+  width: 78%;
+}
+
+label {
+  float: left;
+  font-size: 1.25em;
+  text-transform: lowercase;
+}
+
+.field {
+  margin: 30px 0;
+}
+
+.field:before, .field:after {
+  content: "";
+  display: table;
+}
+
+.field:after {
+  clear: both;
+}
+
+.add-new-activity {
+  margin: 5% 0 0 22%;
 }

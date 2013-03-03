@@ -13,7 +13,7 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div>
     <%= f.hidden_field :person_id, :value => current_user.id %>
   </div>
   <div class="field">
@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :activity %> <%= f.collection_select :activity_id, Activity.all, :id, :name %>
-    <%= link_to 'Add New Activity', new_activity_url %>
+    <div class="add-new-activity"><%= link_to 'Add New Activity', new_activity_url %></div>
   </div>
   <div class="field">
     <%= f.label :tips %>
