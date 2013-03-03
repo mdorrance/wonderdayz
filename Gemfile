@@ -38,6 +38,8 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 # Use unicorn as the app server
 # gem 'unicorn'
 
+gem 'simple_form', '~> 2.0.0'
+
 # Deploy with Capistrano
 # gem 'capistrano'
 

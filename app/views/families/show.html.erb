@@ -1,25 +1,56 @@
 <p id="notice"><%= notice %></p>
+<%= @family.id %>
 
-<p>
-  <b>Tribe name:</b>
-  <%= @family.tribe_name %>
-</p>
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>&nbsp;</th>
 
-<p>
-  <b>Family crest:</b>
-  <%= @family.family_crest_id %>
-</p>
+    </tr>
+  </thead>
+  <tbody>
+    <% @family_members.each do |member| %>
+      <tr>
+        <td><%= member.email %></td>
+        <td></td>
 
-<p>
-  <b>Adventure:</b>
-  <%= @family.adventure_id %>
-</p>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
-<p>
-  <b>Person:</b>
-  <%= @family.person_id %>
-</p>
+<h4>Add members to your family</h4>
+<div class='well'>
+  <button type="button" class="btn btn-block btn-success" data-toggle="collapse" data-target="#demo">
+    Add an Family Member to this Family
+  </button>
+ </div>
 
 
-<%= link_to 'Edit', edit_family_path(@family) %> |
-<%= link_to 'Back', families_path %>
+
+<div id="demo" class="collapse">
+  <br>
+  <%= simple_form_for(@person) do |f| %>
+  <%= f.error_notification %>
+
+
+
+
+<div class="form-inputs">
+  <%= f.hidden_field :family_id %>
+  <%= f.input :email, :label => "email:" %>
+  <%= f.input :password, :label => "password:" %>
+  <%= f.input :password_confirmation, :label => "password confirmation:" %>
+</div>
+
+
+
+
+<div class="form-actions">
+  <%= f.button :submit, :class => 'btn-primary' %>
+</div>
+
+<% end %>
+
+</div>
