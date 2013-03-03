@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       redirect_to person_path(session[:person_id]), notice: "Welcome back, #{person.email}"
       return
     end
-    redirect_to sign_in_url, notice: "Nice try!"
+    redirect_to sign_in_url, notice: "We didn't recogize the email or password. Please try again."
   end
 
   def new
