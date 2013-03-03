@@ -1,8 +1,8 @@
 <div class="span3">
   <div class="well sidebar-nav">
+  <h3>Recent Adventures</h3>
       <ul class="nav nav-list">
         <li class="nav-header"><%= @person.email %></li>
-        <li>Recent Adventures</li>
         <%= link_to "New Adventure", new_adventure_url %>
         <% @person.family.adventures.each do |adventure| %>
         <li><%= link_to adventure.name, adventure %></li>
@@ -10,16 +10,14 @@
       </ul>
   </div><!--/.well -->
   <div class="well sidebar-nav">
-      <ul class="nav nav-list">
-        <li><b>Path to Outdoor Enlightenment</b> </li><br>
-
-
-        <li>Recent Adventures</li>
-        <%= link_to "New Adventure", new_adventure_url %>
-        <% @person.family.adventures.each do |adventure| %>
-        <li><%= link_to adventure.name, adventure %></li>
-        <% end %>
-      </ul>
+  <h3>Path to Outdoor Enlightenment</h3>
+  <h4>recent adventures</h4>
+    <ul class="nav nav-list">
+      <%= link_to "New Adventure", new_adventure_url %>
+      <% @person.family.adventures.each do |adventure| %>
+      <li><%= link_to adventure.name, adventure %></li>
+      <% end %>
+    </ul>
   </div><!--/.well -->
 </div>
 <div class="wrapper">
