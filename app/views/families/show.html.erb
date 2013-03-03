@@ -15,7 +15,7 @@
   <tbody>
     <% @family_members.each do |member| %>
       <tr>
-        <td><%= member.trail_name %></td>
+        <td><%= link_to member.trail_name, member %></td>
         <td><%= member.gender %></td>
         <td><%= member.age %></td>
         <td><%= member.email %></td>
