@@ -21,6 +21,12 @@
   </div><!--/.well -->
 </div>
 <div class="wrapper">
+      <ul class="nav nav-list">
+        <li><b>Progress towards enlightenment</li>
+        <li><%= @person %></li>
+      </ul>
+</div>
+<div class="wrapper">
 <%= link_to 'Edit', edit_person_path(@person) %> <%= link_to 'Back', people_path %>
 <p id="notice"><%= notice %></p>
 
