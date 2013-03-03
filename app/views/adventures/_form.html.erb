@@ -1,3 +1,5 @@
+<div class="wrapper">
+<h1>Create a New Adventure</h1>
 <%= form_for(@adventure) do |f| %>
   <% if @adventure.errors.any? %>
     <div id="error_explanation">
@@ -18,32 +20,10 @@
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
-
-
   <div class="field">
     <%= f.label :activity %><br />
     <%= f.collection_select :activity_id, Activity.all, :id, :name %>
     <%= link_to 'Add New Activity', new_activity_url %>
-  </div>
-  <div class="field">
-    <%#= f.label :tribe_name %><br />
-    <%#= f.text_field :tribe_name %>
-  </div>
-  <div class="field">
-    <%#= f.label :cost %><br />
-    <%#= f.number_field :cost %>
-  </div>
-  <div class="field">
-    <%#= f.label :location_id %><br />
-    <%#= f.number_field :location_id %>
-  </div>
-  <div class="field">
-    <%#= f.label :family_id %><br />
-    <%#= f.number_field :family_id %>
-  </div>
-  <div class="field">
-    <%#= f.label :review_id %><br />
-    <%#= f.number_field :review_id %>
   </div>
   <div class="field">
     <%= f.label :tips %><br />
@@ -53,3 +33,4 @@
     <%= f.submit %>
   </div>
 <% end %>
+</div>

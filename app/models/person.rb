@@ -8,6 +8,6 @@ class Person < ActiveRecord::Base
   has_many :personal_blogs
   has_many :adventures, :through => :family
 
-  has_secure_password
+  # has_secure_password
 
 end
