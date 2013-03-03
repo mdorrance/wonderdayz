@@ -50,7 +50,7 @@
             <ul class="nav">
             <% if @current_user.present? %>
               <li class="loggedin">(logged in as <%= @current_user.email %>)</li>
-              <li><%#= link_to "Go to My Family Page", family_path(@person.family) %></li>
+              <li><%= link_to "Go to My Family Page", family_path(@person.family) %></li>
               <li><%= link_to "Sign Out", '/sessions/destroy'  %></li>
             <% else %>
               <li><%= link_to "Sign Up", new_person_url  %></li>

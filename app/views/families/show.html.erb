@@ -39,6 +39,9 @@
 
 <div class="form-inputs">
   <%= f.hidden_field :family_id %>
+  <%= f.input :trail_name, :label => "Enter your Unique Trail Name" %>
+  <%= f.input :age, :label => "Enter your Age" %>
+  <%= f.input :gender, collection: [ "Male", "Female"], :label => "Male or Female?" %>
   <%= f.input :email, :label => "email:" %>
   <%= f.input :password, :label => "password:" %>
   <%= f.input :password_confirmation, :label => "password confirmation:" %>
