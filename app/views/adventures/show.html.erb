@@ -26,16 +26,23 @@
 </p>
 
 <p>
-  <b>Review:</b>
-
-<% @reviews.each do |review| %>
-<br><b>GOOD:</b> <%= review.good %><br>
-<b>BAD:</b> <%= review.bad %>
-<% end %>
-
-
-
+  <h2>Personal Reviews:</h2>
+  <% @reviews.each do |review| %>
+  <br><b>GOOD:</b> <%= review.good %>
+  <br><b>BAD:</b> <%= review.bad %>
+  <% end %>
 </p>
+
+<p>
+  <h2>Family Reviews:</h2>
+  <% @reviews.each do |review| %>
+  <br><b>GOOD:</b> <%= review.good %>
+  <br><b>BAD:</b> <%= review.bad %>
+  <% end %>
+</p>
+
+
+
 
 <p>
   <b>Tips:</b>
