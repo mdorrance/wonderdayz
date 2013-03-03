@@ -14,8 +14,11 @@ class FamiliesController < ApplicationController
   # GET /families/1.json
   def show
     @family = Family.find(params[:id])
+ 
     @family_members = Person.where(:family_id => @family.id)
     @person = Person.new
+    @person.family_id = @family.id
+    session[:source] = 'Family'
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @family }

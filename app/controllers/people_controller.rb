@@ -56,13 +56,16 @@ class PeopleController < ApplicationController
 
     respond_to do |format|
       if @person.save
+       
+
+        if session[:source] != 'Family'
         f=Family.new
         f.tribe_name=@person.family_name
         f.save
-
         @person.update_attribute(:family_id, f.id)
-
-
+        else
+        end
+        session.delete(:source)
 
         format.html { redirect_to @person, notice: 'Person was successfully created.' }
         format.json { render json: @person, status: :created, location: @person }
