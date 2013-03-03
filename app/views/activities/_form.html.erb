@@ -1,3 +1,5 @@
+<div class="wrapper">
+<h1>New activity</h1>
 <%= form_for(@activity) do |f| %>
   <% if @activity.errors.any? %>
     <div id="error_explanation">
@@ -43,3 +45,4 @@
     <%= f.submit %>
   </div>
 <% end %>
+</div>
