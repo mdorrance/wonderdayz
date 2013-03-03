@@ -166,96 +166,94 @@ end
 
 puts "#{Person.count} People created - should be 9"
 
-personal_blogs = [
-  {:blog => "I am the man in the Emerald City", :person_id => Person.find_by_trail_name("The Oz").id },
-  {:blog => "I really miss my parents", :person_id => Person.find_by_trail_name("Dorthy").id },
-  {:blog => "The food is horrible here. I am starving", :person_id => Person.find_by_trail_name("Toto").id },
-  {:blog => "I miss the woods, but not the rust", :person_id => Person.find_by_trail_name("Tin Man").id },
-  {:blog => "I hate water so please do not ask if I want any.", :person_id => Person.find_by_trail_name("Witch").id },
-  {:blog => "I can feel the hate within. Why me?", :person_id => Person.find_by_trail_name("Darth Vader").id },
-  {:blog => "I am awesome and this Jedi stuff is so easy!", :person_id => Person.find_by_trail_name("Luke").id },
-  {:blog => "Han is so cute! I just can't stand him though.", :person_id => Person.find_by_trail_name("Lea").id },
-  {:blog => "Oh, how I miss being the Queen.", :person_id => Person.find_by_trail_name("Padme").id }
-]
+# personal_blogs = [
+#   {:blog => "I am the man in the Emerald City", :person_id => Person.find_by_trail_name("The Oz").id },
+#   {:blog => "I really miss my parents", :person_id => Person.find_by_trail_name("Dorthy").id },
+#   {:blog => "The food is horrible here. I am starving", :person_id => Person.find_by_trail_name("Toto").id },
+#   {:blog => "I miss the woods, but not the rust", :person_id => Person.find_by_trail_name("Tin Man").id },
+#   {:blog => "I hate water so please do not ask if I want any.", :person_id => Person.find_by_trail_name("Witch").id },
+#   {:blog => "I can feel the hate within. Why me?", :person_id => Person.find_by_trail_name("Darth Vader").id },
+#   {:blog => "I am awesome and this Jedi stuff is so easy!", :person_id => Person.find_by_trail_name("Luke").id },
+#   {:blog => "Han is so cute! I just can't stand him though.", :person_id => Person.find_by_trail_name("Lea").id },
+#   {:blog => "Oh, how I miss being the Queen.", :person_id => Person.find_by_trail_name("Padme").id }
+# ]
 
-PersonalBlog.destroy_all
-  personal_blogs.each do |personal_blog_hash|
-    pb= PersonalBlog.new
-    pb.blog = personal_blog_hash[:blog]
-    pb.person_id = personal_blog_hash[:person_id]
-    pb.save
-  end
+# PersonalBlog.destroy_all
+#   personal_blogs.each do |personal_blog_hash|
+#     pb= PersonalBlog.new
+#     pb.blog = personal_blog_hash[:blog]
+#     pb.person_id = personal_blog_hash[:person_id]
+#     pb.save
+#   end
 
-puts "#{PersonalBlog.count} p blogs created - should be 9"
-
-
-
-family_blogs = [
-  {:blog => "Being Wizards", :activity_id => Activity.find_by_name("Hiking").id, :family_id => Family.find_by_tribe_name("The Wizards").id },
-  {:blog => "Being Skywalkers", :activity_id => Activity.find_by_name("Swimming").id, :family_id => Family.find_by_tribe_name("The Skywalkers").id }
-]
-
-FamilyBlog.destroy_all
-  family_blogs.each do |family_blog_hash|
-    fb= FamilyBlog.new
-    fb.blog = family_blog_hash[:blog]
-    fb.family_id = family_blog_hash[:family_id]
-    fb.save
-  end
-
-puts "#{FamilyBlog.count} F Blogs created - should be 2"
-
-reviews = [
-  {:good => "It was so much fun!", :bad => "I got tired.", :person_id => Person.find_by_trail_name("The Oz").id },
-  {:good => "It was awesome!", :bad => "I got tired.", :person_id => Person.find_by_trail_name("Dorthy").id },
-  {:good => "So much fun!", :bad => "I got tired.", :person_id => Person.find_by_trail_name("Toto").id },
-  {:good => "Fun!", :bad => "I got tired.", :person_id => Person.find_by_trail_name("Tin Man").id },
-  {:good => "Time with Mom", :bad => "I got tired.", :person_id => Person.find_by_trail_name("Witch").id },
-  {:good => "Time with Dad!", :bad => "I got tired.", :person_id => Person.find_by_trail_name("Darth Vader").id },
-  {:good => "Yeah!", :bad => "I got tired.", :person_id => Person.find_by_trail_name("Luke").id },
-  {:good => "Great!", :bad => "I got tired.", :person_id => Person.find_by_trail_name("Lea").id },
-  {:good => "Cool!", :bad => "I got tired.", :person_id => Person.find_by_trail_name("Padme").id }
-]
-
-Review.destroy_all
-reviews.each do |review_hash|
-  r = Review.new
-  r.good = review_hash[:good]
-  r.bad = review_hash[:bad]
-  r.person_id = review_hash[:person_id]
-  r.save
-end
-
-puts "#{Review.count} Reviews created - should be 9"
+# puts "#{PersonalBlog.count} p blogs created - should be 9"
 
 
+
+# family_blogs = [
+#   {:blog => "Being Wizards", :activity_id => Activity.find_by_name("Hiking").id, :family_id => Family.find_by_tribe_name("The Wizards").id },
+#   {:blog => "Being Skywalkers", :activity_id => Activity.find_by_name("Swimming").id, :family_id => Family.find_by_tribe_name("The Skywalkers").id }
+# ]
+
+# FamilyBlog.destroy_all
+#   family_blogs.each do |family_blog_hash|
+#     fb= FamilyBlog.new
+#     fb.blog = family_blog_hash[:blog]
+#     fb.family_id = family_blog_hash[:family_id]
+#     fb.save
+#   end
+
+# puts "#{FamilyBlog.count} F Blogs created - should be 2"
+
+# reviews = [
+#   {:good => "It was so much fun!", :bad => "I got tired.", :person_id => Person.find_by_trail_name("The Oz").id },
+#   {:good => "It was awesome!", :bad => "I got tired.", :person_id => Person.find_by_trail_name("Dorthy").id },
+#   {:good => "So much fun!", :bad => "I got tired.", :person_id => Person.find_by_trail_name("Toto").id },
+#   {:good => "Fun!", :bad => "I got tired.", :person_id => Person.find_by_trail_name("Tin Man").id },
+#   {:good => "Time with Mom", :bad => "I got tired.", :person_id => Person.find_by_trail_name("Witch").id },
+#   {:good => "Time with Dad!", :bad => "I got tired.", :person_id => Person.find_by_trail_name("Darth Vader").id },
+#   {:good => "Yeah!", :bad => "I got tired.", :person_id => Person.find_by_trail_name("Luke").id },
+#   {:good => "Great!", :bad => "I got tired.", :person_id => Person.find_by_trail_name("Lea").id },
+#   {:good => "Cool!", :bad => "I got tired.", :person_id => Person.find_by_trail_name("Padme").id }
+# ]
+
+# Review.destroy_all
+# reviews.each do |review_hash|
+#   r = Review.new
+#   r.good = review_hash[:good]
+#   r.bad = review_hash[:bad]
+#   r.person_id = review_hash[:person_id]
+#   r.save
+# end
+
+# puts "#{Review.count} Reviews created - should be 9"
 
 
 
 
-person_awards = [
-  {:award_id => Award.find_by_name("Lightsaber").id, :person_id => Person.find_by_trail_name("Darth Vader").id},
-  {:award_id => Award.find_by_name("Rat tail").id, :person_id => Person.find_by_trail_name("Luke").id},
-  {:award_id => Award.find_by_name("Rat tail").id, :person_id => Person.find_by_trail_name("Lea").id},
-  {:award_id => Award.find_by_name("Lightsaber").id, :person_id => Person.find_by_trail_name("Padme").id},
-  {:award_id => Award.find_by_name("Ruby Slippers").id, :person_id => Person.find_by_trail_name("The Oz").id},
-  {:award_id => Award.find_by_name("Ruby Slippers").id, :person_id => Person.find_by_trail_name("Dorthy").id},
-  {:award_id => Award.find_by_name("Little Dog").id, :person_id => Person.find_by_trail_name("Toto").id},
-  {:award_id => Award.find_by_name("Little Dog").id, :person_id => Person.find_by_trail_name("Tin Man").id},
-  {:award_id => Award.find_by_name("Ruby Slippers").id, :person_id => Person.find_by_trail_name("Witch").id}
-]
-
-PersonAward.destroy_all
-person_awards.each do |person_award_hash|
-  pa = PersonAward.new
-  pa.award_id = person_award_hash[:award_id]
-  pa.person_id = person_award_hash[:person_id]
-  pa.save
-end
-
-puts "#{PersonAward.count} Person Awards created - should be 9"
 
 
+# person_awards = [
+#   {:award_id => Award.find_by_name("Lightsaber").id, :person_id => Person.find_by_trail_name("Darth Vader").id},
+#   {:award_id => Award.find_by_name("Rat tail").id, :person_id => Person.find_by_trail_name("Luke").id},
+#   {:award_id => Award.find_by_name("Rat tail").id, :person_id => Person.find_by_trail_name("Lea").id},
+#   {:award_id => Award.find_by_name("Lightsaber").id, :person_id => Person.find_by_trail_name("Padme").id},
+#   {:award_id => Award.find_by_name("Ruby Slippers").id, :person_id => Person.find_by_trail_name("The Oz").id},
+#   {:award_id => Award.find_by_name("Ruby Slippers").id, :person_id => Person.find_by_trail_name("Dorthy").id},
+#   {:award_id => Award.find_by_name("Little Dog").id, :person_id => Person.find_by_trail_name("Toto").id},
+#   {:award_id => Award.find_by_name("Little Dog").id, :person_id => Person.find_by_trail_name("Tin Man").id},
+#   {:award_id => Award.find_by_name("Ruby Slippers").id, :person_id => Person.find_by_trail_name("Witch").id}
+# ]
+
+# PersonAward.destroy_all
+# person_awards.each do |person_award_hash|
+#   pa = PersonAward.new
+#   pa.award_id = person_award_hash[:award_id]
+#   pa.person_id = person_award_hash[:person_id]
+#   pa.save
+# end
+
+# puts "#{PersonAward.count} Person Awards created - should be 9"
 
 
 
@@ -265,17 +263,19 @@ puts "#{PersonAward.count} Person Awards created - should be 9"
 
 
 
-enlightenments = [
-  {:adventure_id => Adventure.find_by_name("The Yellow Brick Road").id, :goal_id => Goal.find_by_name("Hiking").id },
-  {:adventure_id => Adventure.find_by_name("Jedi Training").id, :goal_id => Goal.find_by_name("Swimming").id }
-]
 
-Enlightenment.destroy_all
-enlightenments.each do |enlightment_hash|
-  e = Enlightenment.new
-  e.adventure_id = enlightment_hash[:adventure_id]
-  e.goal_id = enlightment_hash[:goal_id]
-  e.save
-end
 
-puts "#{Enlightenment.count} enlightenments created - should be 2"
+# enlightenments = [
+#   {:adventure_id => Adventure.find_by_name("The Yellow Brick Road").id, :goal_id => Goal.find_by_name("Hiking").id },
+#   {:adventure_id => Adventure.find_by_name("Jedi Training").id, :goal_id => Goal.find_by_name("Swimming").id }
+# ]
+
+# Enlightenment.destroy_all
+# enlightenments.each do |enlightment_hash|
+#   e = Enlightenment.new
+#   e.adventure_id = enlightment_hash[:adventure_id]
+#   e.goal_id = enlightment_hash[:goal_id]
+#   e.save
+# end
+
+# puts "#{Enlightenment.count} enlightenments created - should be 2"
