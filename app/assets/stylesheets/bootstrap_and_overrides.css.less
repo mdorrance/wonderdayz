@@ -67,7 +67,13 @@
 footer {
   bottom: 0;
   position: fixed;
+  height: 40px;
   width: 100%;
+  background: -webkit-linear-gradient(top, #ffffff, #999999);
+  background: -moz-linear-gradient(top, #ffffff, #999999);
+  background: -ms-linear-gradient(top, #ffffff, #999999);
+  background: -o-linear-gradient(top, #ffffff, #999999);
+
 }
 
 .find-adventures {
@@ -81,6 +87,14 @@ footer {
   padding: 14px 0 0 0;
 }
 
-.logo {
-  font-family: "Molle", cursive;
+.logo, .logo:hover {
+  color: #333;
+  float: left;
+  font: 3em 'Kavoon', cursive;
+  text-decoration: none;
+}
+
+.top-nav {
+  float: right;
+  margin: 8px 0 0 0;
 }

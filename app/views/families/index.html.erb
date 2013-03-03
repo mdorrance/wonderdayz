@@ -3,7 +3,6 @@
 <table>
   <tr>
     <th>Tribe name</th>
-    <th>Family crest</th>
     <th>Adventure</th>
     <th>Person</th>
     <th></th>
@@ -14,8 +13,7 @@
 <% @families.each do |family| %>
   <tr>
     <td><%= family.tribe_name %></td>
-    <td><%= family.family_crest_id %></td>
-    <td><%= family.adventure_id %></td>
+    <td><%= family.adventure.name %></td>
     <td><%= family.person_id %></td>
     <td><%= link_to 'Show', family %></td>
     <td><%= link_to 'Edit', edit_family_path(family) %></td>

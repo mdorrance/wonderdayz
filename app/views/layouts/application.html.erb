@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='http://fonts.googleapis.com/css?family=Molle:400italic' rel='stylesheet' type='text/css'>
     <title><%= content_for?(:title) ? yield(:title) : "Wonderdayz" %></title>
     <%= csrf_meta_tags %>
 
@@ -12,6 +11,7 @@
     <!--[if lt IE 9]>
       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js" type="text/javascript"></script>
     <![endif]-->
+    <link href='http://fonts.googleapis.com/css?family=Kavoon' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag "application", :media => "all" %>
 
     <!-- For third-generation iPad with high-resolution Retina display: -->
@@ -45,12 +45,14 @@
             <span class="icon-bar"></span>
           </a>
           <div class="container-fluid nav-collapse">
+            <div><%= link_to 'Wonderdayz', root_url, :class => 'logo' %></div>
+            <div class="top-nav">
             <ul class="nav">
-              <li><%= link_to 'Wonderdayz', root_url, :class => 'logo'%></li>
               <li><%= link_to "Sign Up", new_person_url  %></li>
               <li><%= link_to "Sign In", '/sessions/new'  %></li>
               <li><%= link_to "Sign Out", '/sessions/destroy'  %></li>
             </ul>
+          </div>
             <% if @current_user.present? %>
               <div class="loggedin">Logged in as <%= @current_user.email %></div>
             <% else %>
@@ -68,11 +70,10 @@
         </div>
       </div><!--/row-->
 
-      <footer>
+    </div> <!-- /container -->
+    <footer>
         <p>&copy; Wonderdayz 2013</p>
       </footer>
-
-    </div> <!-- /container -->
 
     <!-- Javascripts
     ================================================== -->
