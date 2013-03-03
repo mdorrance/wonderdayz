@@ -28,10 +28,25 @@
 // See http://twitter.github.com/bootstrap/customize.html#variables for their names and documentation
 //
 // Example:
-@linkColor: blue;
+@linkColor: #e35b17;
+
+body {
+  color: #595959;
+}
 
 body, a {
   font-family: 'Open Sans', sans-serif;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+body {
+  // background: #f5c854;
+  // background: #f9df9c;
+  // background: #52c149;
+  background: #e8e8e8;
 }
 
 .wrapper {
@@ -68,6 +83,15 @@ body, a {
   float: right;
 }
 
+.navbar-inner {
+  background: -webkit-linear-gradient(top, #ffae8d, #e35b17);
+  background: -moz-linear-gradient(top, #ffae8d, #e35b17);
+  background: -ms-linear-gradient(top, #ffae8d, #e35b17);
+  background: -o-linear-gradient(top, #ffae8d, #e35b17);
+  border: none;
+  padding: 10px;
+}
+
 // footer {
 //   bottom: 0;
 //   padding: 10px;
@@ -85,14 +109,14 @@ body, a {
 }
 
 .loggedin {
-  color: blue;
+  color: #961f15;
   float: right;
   font: 1em "Helvetica", sans-serif;
   padding: 12px 0 0 0;
 }
 
 .logo, .logo:hover {
-  color: #333;
+  color: #69160f;
   float: left;
   font: 3em 'Kavoon', cursive;
   text-decoration: none;
@@ -115,31 +139,44 @@ input[type="text"], input[type="password"] {
   float: right;
   height: 40px;
   margin: 0 0 20px 0;
-  width: 70%;
+  width: 65%;
 }
 
 input[type="submit"] {
   float: right;
-  margin: 10px 18px 0 0;
+  margin: -20px 0px 0 0;
+  padding: 10px;
   width: 25%;
+  background-color: #961f15;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  margin: 0 5px;
+  text-shadow: 0 1px 0 #666;
+}
+
+input[type="submit"]:hover {
+  background-color: #ac2418;
+  color: #fff;
 }
 
 textarea {
   // margin: 0 0 50px 70px;
   float: right;
   height: 100px;
-  width: 70%;
+  width: 65%;
 }
 
 select {
   float: right;
   // margin: 0 0 50px 38px;
-  width: 73%;
+  width: 68%;
 }
 
 label {
   float: left;
   font-size: 1.2em;
+  margin: 0 0 0 20px;
   text-transform: lowercase;
 }
 
@@ -157,5 +194,19 @@ label {
 }
 
 .add-new-activity {
-  margin: 7% 0 0 27%;
+  margin: 7% 0 0 32%;
+}
+
+.navbar .nav > li > a {
+  // color: #ffb30d;
+  background-color: #961f15;
+  border-radius: 5px;
+  color: #fff;
+  margin: 0 5px;
+  text-shadow: 0 1px 0 #666;
+}
+
+.navbar .nav > li > a:hover {
+  background-color: #ac2418;
+  color: #fff;
 }
