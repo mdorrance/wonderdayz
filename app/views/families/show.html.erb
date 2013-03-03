@@ -36,30 +36,33 @@
 
 
 <div id="demo" class="collapse">
-  <br>
+  <div class = "add-family-member">
   <%= simple_form_for(@person) do |f| %>
   <%= f.error_notification %>
+    <%= f.hidden_field :family_id %>
+    <div class="field">
+      <%= f.input :trail_name, :label => "Enter your Unique Trail Name" %>
+    </div>
+    <div class = "field">
+      <%= f.input :age, :label => "Enter your Age" %>
+    </div>
+    <div class = "field">
+      <%= f.input :gender, collection: [ "Male", "Female"], :label => "Male or Female?" %>
+    </div>
+    <div class="field">
+      <%= f.input :email, :label => "email:" %>
+    </div>
+    <div class="field">
+      <%= f.input :password, :label => "password:" %>
+    </div>
+    <div class="field">
+      <%= f.input :password_confirmation, :label => "password confirmation:" %>
+    </div>
+    <div class="actions">
+      <%= f.button :submit %>
+    </div>
 
+  <% end %>
 
-
-
-<div class="form-inputs">
-  <%= f.hidden_field :family_id %>
-  <%= f.input :trail_name, :label => "Enter your Unique Trail Name" %>
-  <%= f.input :age, :label => "Enter your Age" %>
-  <%= f.input :gender, collection: [ "Male", "Female"], :label => "Male or Female?" %>
-  <%= f.input :email, :label => "email:" %>
-  <%= f.input :password, :label => "password:" %>
-  <%= f.input :password_confirmation, :label => "password confirmation:" %>
 </div>
-
-
-
-
-<div class="form-actions">
-  <%= f.button :submit, :class => 'btn-primary' %>
-</div>
-
-<% end %>
-
 </div>
