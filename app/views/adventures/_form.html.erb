@@ -23,6 +23,7 @@
   <div class="field">
     <%= f.label :activity %><br />
     <%= f.collection_select :activity_id, Activity.all, :id, :name %>
+    <%= link_to 'Add New Activity', new_activity_url %>
   </div>
   <div class="field">
     <%#= f.label :tribe_name %><br />

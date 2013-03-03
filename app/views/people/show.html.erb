@@ -3,9 +3,9 @@
       <ul class="nav nav-list">
         <li class="nav-header"><%= @person.email %></li>
         <li>Recent Adventures</li>
-        <%= link_to "New Activity", new_activity_url %>
+        <%= link_to "New Adventure", new_adventure_url %>
         <% @person.family.adventures.each do |adventure| %>
-        <li><%= adventure.name %></li>
+        <li><%= link_to adventure.name, adventure %></li>
         <% end %>
       </ul>
   </div><!--/.well -->

@@ -7,32 +7,27 @@
 
 <p>
   <b>Activity:</b>
-  <%= @adventure.activity_id %>
-</p>
-
-<p>
-  <b>Family crest:</b>
-  <%#= @adventure.family_crest_id %>
+  <%= @adventure.activity.name %>
 </p>
 
 <p>
   <b>Cost:</b>
-  <%#= @adventure.cost_id %>
+  <%= @adventure.activity.cost %>
 </p>
 
 <p>
   <b>Location:</b>
-  <%#= @adventure.location_id %>
+  <%= @adventure.activity.address %> <%= @adventure.activity.city %> <%= @adventure.activity.state %> <%= @adventure.activity.zipcode %>
 </p>
 
 <p>
   <b>Family:</b>
-  <%#= @adventure.family_id %>
+  <%= @adventure.person.family.tribe_name %>
 </p>
 
 <p>
   <b>Review:</b>
-  <%#= @adventure.review_id %>
+  <%#= @adventure.activity.reviews.class %>
 </p>
 
 <p>
