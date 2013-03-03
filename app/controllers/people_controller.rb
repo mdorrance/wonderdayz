@@ -2,10 +2,6 @@ class PeopleController < ApplicationController
 
   skip_before_filter :require_login, :only => [:new, :create]
 
-
-
-
-
   # GET /people
   # GET /people.json
   def index
@@ -22,7 +18,7 @@ class PeopleController < ApplicationController
   def show
 
     # if Person.find_by_id(params[:id]) != nil
-      @person = Person.find_by_id(params[:id])
+    @person = Person.find_by_id(params[:id])
     # else
     #   redirect_to sign_in_url
     # end
@@ -56,7 +52,7 @@ class PeopleController < ApplicationController
 
     respond_to do |format|
       if @person.save
-       
+
 
         if session[:source] != 'Family'
         f=Family.new
