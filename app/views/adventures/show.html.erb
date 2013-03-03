@@ -28,6 +28,7 @@
 <p>
   <h2>Personal Reviews:</h2>
   <% @reviews.each do |review| %>
+  <br><b>Name:</b> <%= review.person.trail_name %>
   <br><b>GOOD:</b> <%= review.good %>
   <br><b>BAD:</b> <%= review.bad %>
   <% end %>
@@ -35,7 +36,9 @@
 
 <p>
   <h2>Family Reviews:</h2>
+
   <% @reviews.each do |review| %>
+  <br><b>Name:</b> <%= review.person.trail_name %>
   <br><b>GOOD:</b> <%= review.good %>
   <br><b>BAD:</b> <%= review.bad %>
   <% end %>
