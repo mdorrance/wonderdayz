@@ -5,4 +5,6 @@ class Activity < ActiveRecord::Base
 
   has_many :adventures
 
+  belongs_to :goal
+
 end
