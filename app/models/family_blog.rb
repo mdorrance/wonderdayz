@@ -4,4 +4,5 @@ class FamilyBlog < ActiveRecord::Base
   validates_presence_of :blog
 
   belongs_to :family
+
 end

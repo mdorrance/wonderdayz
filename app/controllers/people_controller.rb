@@ -19,6 +19,9 @@ class PeopleController < ApplicationController
 
     # if Person.find_by_id(params[:id]) != nil
     @person = Person.find_by_id(params[:id])
+    @adventures = Adventure.where(:family_id => @person.family_id)
+
+
     # else
     #   redirect_to sign_in_url
     # end

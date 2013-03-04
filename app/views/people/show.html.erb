@@ -23,7 +23,22 @@
 <div class="wrapper">
       <ul class="nav nav-list">
         <li><b>Progress towards enlightenment</li>
-        <li><%= @person %></li>
+       <% if @adventures !=nil %>
+         <% @adventures.each do |adventure| %>
+           <li><%= adventure.activity.name %></li>
+           <% end %>
+       <% else %>
+       <% end  %>
+
+
+
+
+
+
+
+
+
+
       </ul>
 </div>
 <div class="wrapper">

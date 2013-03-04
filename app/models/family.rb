@@ -1,6 +1,7 @@
 class Family < ActiveRecord::Base
   attr_accessible :tribe_name
 
+  has_many :activies
   has_many :family_crests
   has_many :adventures
   has_many :people
