@@ -2,7 +2,6 @@ class SessionsController < ApplicationController
 
     skip_before_filter :require_login, :only => [:new, :create]
 
-
   def create
     person = Person.find_by_email(params[:email])
     if person.present? && person.authenticate(params[:password])
@@ -21,9 +20,6 @@ class SessionsController < ApplicationController
       format.json { render json: @user }
     end
   end
-
-
-
 
   def destroy
     reset_session
