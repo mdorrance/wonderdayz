@@ -69,11 +69,11 @@ family_crests.each do |family_crest_hash|
 
 activities = [
   {:name => "Hiking", :cost => 0, :location_name => "Land of Oz", :address => "1234 Yellow Brick Rd", :city => "Munchkinville", :state => "Oz", :zipcode => "12345", :goal_id => Goal.find_by_name("1 Mile Hike").id},
-  {:name => "Camping", :cost => 0, :location_name => "Land of Oz", :address => "1234 Yellow Brick Rd", :city => "Munchkinville", :state => "Oz", :zipcode => "12345", :goal_id => Goal.find_by_name("1 Mile Hike").id},
-  {:name => "Cooking", :cost => 0, :location_name => "Land of Oz", :address => "1234 Yellow Brick Rd", :city => "Munchkinville", :state => "Oz", :zipcode => "12345", :goal_id => Goal.find_by_name("1 Mile Hike").id},
-  {:name => "Biking", :cost => 0, :location_name => "Land of Oz", :address => "1234 Yellow Brick Rd", :city => "Munchkinville", :state => "Oz", :zipcode => "12345", :goal_id => Goal.find_by_name("1 Mile Hike").id},
-  {:name => "Swimming", :cost => 0, :location_name => "Land of Oz", :address => "1234 Yellow Brick Rd", :city => "Munchkinville", :state => "Oz", :zipcode => "12345", :goal_id => Goal.find_by_name("1 Mile Hike").id},
-  {:name => "Explore Park", :cost => 0, :location_name => "Dagobah", :address => "1234 Swamp", :city => "Middle of Nowhere", :state => "Yoda", :zipcode => "12345", :goal_id => Goal.find_by_name("Swim in Lake").id}
+  {:name => "Camping", :cost => 0, :location_name => "Land of Oz", :address => "1234 Yellow Brick Rd", :city => "Munchkinville", :state => "Oz", :zipcode => "12345", :goal_id => Goal.find_by_name("Camp Overnight").id},
+  {:name => "Cooking", :cost => 0, :location_name => "Land of Oz", :address => "1234 Yellow Brick Rd", :city => "Munchkinville", :state => "Oz", :zipcode => "12345", :goal_id => Goal.find_by_name("Cook on Fire").id},
+  {:name => "Biking", :cost => 0, :location_name => "Land of Oz", :address => "1234 Yellow Brick Rd", :city => "Munchkinville", :state => "Oz", :zipcode => "12345", :goal_id => Goal.find_by_name("5 Mile Bike").id},
+  {:name => "Swimming", :cost => 0, :location_name => "Land of Oz", :address => "1234 Yellow Brick Rd", :city => "Munchkinville", :state => "Oz", :zipcode => "12345", :goal_id => Goal.find_by_name("Swim in Lake").id},
+  {:name => "Explore Park", :cost => 0, :location_name => "Dagobah", :address => "1234 Swamp", :city => "Middle of Nowhere", :state => "Yoda", :zipcode => "12345", :goal_id => Goal.find_by_name("Play in Park").id}
 ]
 
 puts "#{FamilyCrest.count} Family crests created - should be 2"
@@ -145,15 +145,15 @@ puts "#{Award.count} Awards created - should be 4"
 
 
 import_people =[
-  {:trail_name => "The Oz", :age => "15", :gender => "male", :role => "son", :email => "moms@emial.com", :family_id => Family.find_by_tribe_name("The Wizards").id, :password => "1234" },
-  {:trail_name => "Dorthy", :age => "17", :gender => "female", :role => "daughter", :email => "moms@emial.com", :family_id => Family.find_by_tribe_name("The Wizards").id, :password => "1234" },
-  {:trail_name => "Toto", :age => "5", :gender => "male", :role => "son", :email => "moms@emial.com", :family_id => Family.find_by_tribe_name("The Wizards").id, :password => "1234" },
-  {:trail_name => "Witch", :age => "35", :gender => "female", :role => "mom", :email => "moms@emial.com", :family_id => Family.find_by_tribe_name("The Wizards").id, :password => "1234" },
-  {:trail_name => "Tin Man", :age => "35", :gender => "male", :role => "father", :email => "dadss@emial.com", :family_id => Family.find_by_tribe_name("The Wizards").id, :password => "1234" },
-  {:trail_name => "Darth Vader", :age => "45", :gender => "male", :role => "father", :email => "deathstar@emial.com", :family_id => Family.find_by_tribe_name("The Skywalkers").id, :password => "1234" },
-  {:trail_name => "Luke", :age => "10", :gender => "male", :role => "son", :email => "deathstar@emial.com", :family_id => Family.find_by_tribe_name("The Skywalkers").id, :password => "1234" },
-  {:trail_name => "Lea", :age => "1o", :gender => "female", :role => "daughter", :email => "deathstar@emial.com", :family_id => Family.find_by_tribe_name("The Skywalkers").id, :password => "1234"},
-  {:trail_name => "Padme", :age => "49", :gender => "female", :role => "mother", :email => "deathstar@emial.com", :family_id => Family.find_by_tribe_name("The Skywalkers").id, :password => "1234" }
+  {:trail_name => "The Oz", :age => "15", :gender => "male", :role => "son", :email => "moms@email.com", :family_id => Family.find_by_tribe_name("The Wizards").id, :password => "1234" },
+  {:trail_name => "Dorthy", :age => "17", :gender => "female", :role => "daughter", :email => "moms@email.com", :family_id => Family.find_by_tribe_name("The Wizards").id, :password => "1234" },
+  {:trail_name => "Toto", :age => "5", :gender => "male", :role => "son", :email => "moms@email.com", :family_id => Family.find_by_tribe_name("The Wizards").id, :password => "1234" },
+  {:trail_name => "Witch", :age => "35", :gender => "female", :role => "mom", :email => "moms@email.com", :family_id => Family.find_by_tribe_name("The Wizards").id, :password => "1234" },
+  {:trail_name => "Tin Man", :age => "35", :gender => "male", :role => "father", :email => "dadss@email.com", :family_id => Family.find_by_tribe_name("The Wizards").id, :password => "1234" },
+  {:trail_name => "Darth Vader", :age => "45", :gender => "male", :role => "father", :email => "deathstar@email.com", :family_id => Family.find_by_tribe_name("The Skywalkers").id, :password => "1234" },
+  {:trail_name => "Luke", :age => "10", :gender => "male", :role => "son", :email => "deathstar@email.com", :family_id => Family.find_by_tribe_name("The Skywalkers").id, :password => "1234" },
+  {:trail_name => "Lea", :age => "1o", :gender => "female", :role => "daughter", :email => "deathstar@email.com", :family_id => Family.find_by_tribe_name("The Skywalkers").id, :password => "1234"},
+  {:trail_name => "Padme", :age => "49", :gender => "female", :role => "mother", :email => "deathstar@email.com", :family_id => Family.find_by_tribe_name("The Skywalkers").id, :password => "1234" }
 ]
 
 Person.destroy_all
