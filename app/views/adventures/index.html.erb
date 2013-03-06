@@ -1,3 +1,4 @@
+<div class="wrapper">
 <h1>Listing adventures</h1>
 
 <table>
@@ -18,8 +19,8 @@
 <% @adventures.each do |adventure| %>
   <tr>
     <td><%= adventure.name %></td>
-    <td><%#= adventure.activity_id %></td>
-    <td><%#= adventure.family_crest_id %></td>
+    <td><%= adventure.activity.name %></td>
+    <td><%#= adventure.family.tribe_name %></td>
     <td><%= adventure.activity.cost %></td>
     <td><%#= adventure.location_id %></td>
     <td><%#= adventure.family_id %></td>
@@ -35,3 +36,4 @@
 <br />
 
 <%= link_to 'New Adventure', new_adventure_path %>
+</div>

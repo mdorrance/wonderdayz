@@ -22,7 +22,7 @@ goals =[
     g.save
   end
 
-puts "#{Goal.count} Goals created - should be 7"
+puts "#{Goal.count} Goals created - should be 6"
 
 
   crests = [
