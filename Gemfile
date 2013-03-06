@@ -40,8 +40,11 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 
 gem 'simple_form', '~> 2.0.0'
 
+gem 'foursquare2'
+
 # Deploy with Capistrano
 # gem 'capistrano'
 
 # To use debugger
 # gem 'debugger'
+

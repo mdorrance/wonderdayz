@@ -26,6 +26,7 @@
        <% if @adventures !=nil %>
          <% @adventures.each do |adventure| %>
            <li><%= adventure.activity.name %></li>
+           <li><%= adventure.activity.goal.name %></li>
            <% end %>
        <% else %>
        <% end  %>

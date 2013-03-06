@@ -76,7 +76,7 @@ activities = [
   {:name => "Explore Park", :cost => 0, :location_name => "Dagobah", :address => "1234 Swamp", :city => "Middle of Nowhere", :state => "Yoda", :zipcode => "12345", :goal_id => Goal.find_by_name("Play in Park").id}
 ]
 
-puts "#{FamilyCrest.count} Family crests created - should be 2"
+puts "#{Activity.count} Activities created - should be 2"
 
 
 
@@ -90,6 +90,7 @@ activities.each do |activity_hash|
   a.city = activity_hash[:city]
   a.state = activity_hash[:state]
   a.zipcode = activity_hash[:zipcode]
+  a.goal_id = activity_hash[:goal_id]
   a.save
 end
 

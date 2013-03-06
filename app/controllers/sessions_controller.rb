@@ -4,13 +4,13 @@ class SessionsController < ApplicationController
 
 
   def create
-    person = Person.find_by_email(params[:email])
+    person = Person.find_by_trail_name(params[:trail_name])
     if person.present? && person.authenticate(params[:password])
       session[:person_id] = person.id
-      redirect_to person_path(session[:person_id]), notice: "Welcome back, #{person.email}"
+      redirect_to person_path(session[:person_id]), notice: "Welcome back, #{person.trail_name}"
       return
     end
-    redirect_to sign_in_url, notice: "We didn't recogize the email or password. Please try again."
+    redirect_to sign_in_url, notice: "We didn't recogize the trail name or password. Please try again."
   end
 
   def new
