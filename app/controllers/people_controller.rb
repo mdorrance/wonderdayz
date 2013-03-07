@@ -21,6 +21,22 @@ class PeopleController < ApplicationController
     @person = Person.find_by_id(params[:id])
     @adventures = Adventure.where(:family_id => @person.family_id)
 
+    zap = Array.new
+    Activity.all.each do |zip|
+      zap << zip.name
+    end
+
+    more_zap = Array.new
+
+    @adventures.each do |adventure|
+       more_zap << adventure.activity.name
+    end
+
+    zippy = Array.new
+    @zippy = zap - more_zap
+
+
+
 
     # else
     #   redirect_to sign_in_url

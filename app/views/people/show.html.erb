@@ -33,24 +33,9 @@
        <br>
        <li><b>Left to do:</b>
 
-      <% zap = Array.new %>
-      <% Activity.all.each do |zip| %>
-      <% zap << zip.name %>
-      <% end %>
-
-      <% more_zap = Array.new %>
-
-      <% @adventures.each do |adventure| %>
-        <li><% more_zap << adventure.activity.name %>
-      <% end %>
-
-      <% zippy = Array.new %>
-      <% zippy = zap - more_zap %>
-
-
-      <% zippy.each do |t| %>
-      <li><%= t %></li>
-      <% end %>
+      <% @zippy.each do |t| %>
+        <li><%= t %></li>
+        <% end %>
 
       </ul>
 </div>
