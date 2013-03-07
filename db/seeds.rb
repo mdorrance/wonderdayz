@@ -153,7 +153,7 @@ import_people =[
   {:trail_name => "Tin Man", :age => "35", :gender => "male", :role => "father", :email => "dadss@email.com", :family_id => Family.find_by_tribe_name("The Wizards").id, :password => "1234" },
   {:trail_name => "Darth Vader", :age => "45", :gender => "male", :role => "father", :email => "deathstar@email.com", :family_id => Family.find_by_tribe_name("The Skywalkers").id, :password => "1234" },
   {:trail_name => "Luke", :age => "10", :gender => "male", :role => "son", :email => "deathstar@email.com", :family_id => Family.find_by_tribe_name("The Skywalkers").id, :password => "1234" },
-  {:trail_name => "Lea", :age => "1o", :gender => "female", :role => "daughter", :email => "deathstar@email.com", :family_id => Family.find_by_tribe_name("The Skywalkers").id, :password => "1234"},
+  {:trail_name => "Lea", :age => "10", :gender => "female", :role => "daughter", :email => "deathstar@email.com", :family_id => Family.find_by_tribe_name("The Skywalkers").id, :password => "1234"},
   {:trail_name => "Padme", :age => "49", :gender => "female", :role => "mother", :email => "deathstar@email.com", :family_id => Family.find_by_tribe_name("The Skywalkers").id, :password => "1234" }
 ]
 
