@@ -5,9 +5,7 @@
   <thead>
     <tr>
       <th>Trail Name</th>
-      <th>Gender</th>
       <th>Age</th>
-      <th>Role</th>
       <th>Email</th>
       <th>&nbsp;</th>
     </tr>
@@ -16,9 +14,7 @@
     <% @family_members.each do |member| %>
       <tr>
         <td><%= link_to member.trail_name, member %></td>
-        <td><%= member.gender %></td>
         <td><%= member.age %></td>
-        <td><%= member.role %></td>
         <td><%= member.email %></td>
         <td></td>
       </tr>
