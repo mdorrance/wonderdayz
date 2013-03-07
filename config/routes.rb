@@ -22,6 +22,7 @@ Wonderdayz::Application.routes.draw do
   resources :families
   resources :adventures
 
+
   get "sessions/new", :as => :sign_in
 
   post "sessions/create" => "sessions#create"

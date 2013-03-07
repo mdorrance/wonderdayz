@@ -71,6 +71,8 @@ class PeopleController < ApplicationController
 
     respond_to do |format|
       if @person.save
+      session[:person_id] = @person.id
+
 
 
         if session[:source] != 'Family'
