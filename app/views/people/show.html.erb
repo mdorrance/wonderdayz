@@ -30,6 +30,7 @@
            <% end %>
        <% else %>
        <% end %>
+       <br>
        <li><b>Left to do:</b>
 
       <% zap = Array.new %>
@@ -43,7 +44,13 @@
         <li><% more_zap << adventure.activity.name %>
       <% end %>
 
-      <%= zap - more_zap %>
+      <% zippy = Array.new %>
+      <% zippy = zap - more_zap %>
+
+
+      <% zippy.each do |t| %>
+      <li><%= t %></li>
+      <% end %>
 
       </ul>
 </div>
