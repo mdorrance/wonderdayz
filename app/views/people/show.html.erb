@@ -29,7 +29,21 @@
            <li><%= adventure.activity.goal.name %></li>
            <% end %>
        <% else %>
-       <% end  %>
+       <% end %>
+       <li><b>Left to do:</b>
+
+      <% zap = Array.new %>
+      <% Activity.all.each do |zip| %>
+      <% zap << zip.name %>
+      <% end %>
+
+      <% more_zap = Array.new %>
+
+      <% @adventures.each do |adventure| %>
+        <li><% more_zap << adventure.activity.name %>
+      <% end %>
+
+      <%= zap - more_zap %>
 
       </ul>
 </div>
