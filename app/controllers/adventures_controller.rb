@@ -2,7 +2,7 @@ class AdventuresController < ApplicationController
   # GET /adventures
   # GET /adventures.json
   def index
-    @adventures = Adventure.all
+    @adventures = Adventure.limit(500)
 
     respond_to do |format|
       format.html # index.html.erb

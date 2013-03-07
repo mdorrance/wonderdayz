@@ -22,6 +22,8 @@ Wonderdayz::Application.routes.draw do
   resources :families
   resources :adventures
 
+  get '/adventures' => 'adventures#index'
+
 
   get "sessions/new", :as => :sign_in
 
