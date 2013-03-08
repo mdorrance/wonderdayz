@@ -20,8 +20,10 @@ class PeopleController < ApplicationController
     # if Person.find_by_id(params[:id]) != nil
     @person = Person.find_by_id(params[:id])
     @adventures = Adventure.where(:family_id => @person.family_id)
-    @activity = activity = params[:activity].capitalize
-    @filtered_activities = Activity.where(:name => @activity)
+    if params[:activity] != nil
+     @activity = params[:activity].capitalize
+     @filtered_activities = Activity.where(:name => @activity)
+    end
     @age = params[:age]
 
     zap = Array.new

@@ -1,9 +1,10 @@
 class Activity < ActiveRecord::Base
-  attr_accessible :name, :cost, :location_name, :address, :city, :state, :zipcode, :goal_id
+  attr_accessible :name, :cost, :location_name, :address, :city, :state, :zipcode, :goal_id, :adventures_attributes
 
   validates_presence_of :name, :cost, :location_name, :address, :city, :state, :zipcode
 
   has_many :adventures
+  accepts_nested_attributes_for :adventures
   has_many :families, through: :adventures
   belongs_to :goal
   has_many :reviews, through: :adventures

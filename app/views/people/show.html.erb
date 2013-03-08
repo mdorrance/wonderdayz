@@ -62,11 +62,11 @@
   <h1>UPCOMING ADVENTURES</h1>
   <div class="find-adventures">
     <form action="<%=person_url(@person.id)%>">
-        <input type="text" class="search-query span5" placeholder="search for an adventure" name="activity">   <input type="text" class="search-query span5" placeholder="search by age" name="age"> <%= submit_tag "Search Now" %>
+        <input type="text" class="search-query span5" placeholder="search for an activity" name="activity">   <input type="text" class="search-query span5" placeholder="search by age" name="age"> <%= submit_tag "Search Now" %>
 
     </form>
   </div>
-
+        <% if @filtered_activities != nil %>
             <% @filtered_activities.each do |activity| %>
             <p><%= activity.name %></p>
                 <% activity.adventures.each do |adventure|%>
@@ -81,7 +81,7 @@
 
                 <% end %>
             <% end %>
-
+          <% end %>
   <div class="blog">
     <h1>BLOG POSTS</h1>
     <%= link_to 'Create Blog Post', new_personal_blog_url %>
